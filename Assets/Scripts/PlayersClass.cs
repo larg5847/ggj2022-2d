@@ -7,9 +7,10 @@ public class PlayersClass
 
     public float velocidadMov;
     public Vector2 direccion;
-    public int tipoJugador;
+    public bool esCazador;
 
     public SpriteRenderer visualOno;
+    public Animator animator;
 
     public float contadorRegresivo;
 
@@ -18,4 +19,10 @@ public class PlayersClass
         direccion = Vector2.zero;
         contadorRegresivo = 10.0f;
        }
+    public PlayersClass(float vel, Vector2 v, bool tjug)
+    {
+        velocidadMov = vel;
+        direccion = v;
+        esCazador = tjug;
+    }
 }
